@@ -1,0 +1,24 @@
+/*
+ * Главный файл стилей.
+ * Все паршалы подключаются сюда.
+ */
+
+@import './base/reset';
+@import './base/colors';
+@import './base/fonts';
+@import './components/preloader';
+@import './components/button';
+@import './components/container';
+@import './components/modal';
+@import './components/scroll-top';
+@import './utils/mixins';
+@import './layout/hero';
+@import './layout/header';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
+@import './layout/modal-form';

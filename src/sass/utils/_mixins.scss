@@ -1,0 +1,40 @@
+@mixin transition($one: all, $time: 250ms, $function: ease-in-out) {
+  transition-property: $one;
+  transition-duration: $time;
+  transition-timing-function: $function;
+}
+
+@mixin font($fw, $fs, $lh, $ls, $tt: none, $fc) {
+  font-weight: $fw;
+  font-size: $fs;
+  line-height: $lh / $fs;
+  letter-spacing: $ls;
+  text-transform: $tt;
+  color: $fc;
+}
+
+@mixin flex($display, $ai, $jc, $direction, $wrap) {
+  display: $display;
+  align-items: $ai;
+  justify-content: $jc;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+}
+
+@mixin list($wrap: wrap, $ml, $mt) {
+  display: flex;
+  flex-wrap: $wrap;
+  margin-left: -1 * $ml;
+  margin-top: -1 * $mt;
+}
+
+@mixin item($ml, $mt, $q, $gap) {
+  margin-left: $ml;
+  margin-top: $mt;
+  flex-basis: calc(100% / #{$q} - #{$gap});
+}
+
+@mixin section($pt, $pb) {
+  padding-top: $pt;
+  padding-bottom: $pb;
+}

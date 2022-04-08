@@ -1,0 +1,209 @@
+.header-container {
+  position: relative;
+}
+.nav {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  z-index: 100;
+  left: 20px;
+  width: 65%;
+  @media screen and (min-width: 768px) {
+    width: 95%;
+  }
+  @media screen and (min-width: 1280px) {
+    justify-content: flex-start;
+  }
+}
+.logo-nav {
+  padding-top: 6px;
+  display: flex;
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
+}
+.menu__toggle {
+  position: absolute;
+  top: 25px;
+  padding-left: 61px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  cursor: url(https://cdn.custom-cursor.com/db/8927/32/minimal-pink-ice-cream-pointer.png), pointer;
+  border: none;
+
+  @media screen and (min-width: 768px) {
+    top: 52px;
+    right: 224px;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.menu__toggle2 {
+  position: absolute;
+  top: 25px;
+  right: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: transparent;
+  cursor: url(https://cdn.custom-cursor.com/db/8927/32/minimal-pink-ice-cream-pointer.png), pointer;
+  border: none;
+}
+.header-nav {
+  display: flex;
+  margin: 0 110px;
+
+  @media screen and (max-width: 1279px) {
+    display: none;
+  }
+}
+.header-nav__item:not(:last-child) {
+  margin-right: 35px;
+}
+.header-nav__link {
+  display: block;
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $primary-button;
+  margin-top: 50px;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $crimson-text;
+  }
+}
+.header-button {
+  position: absolute;
+  z-index: 100;
+  top: 38px;
+  right: 34px;
+  background-color: $primary-button;
+  border-radius: 22px;
+  width: 159px;
+  height: 44px;
+  cursor: url(https://cdn.custom-cursor.com/db/8927/32/minimal-pink-ice-cream-pointer.png), pointer;
+  animation: pulsate-bck 1s ease-in-out 3s infinite both;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-button-hov;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.header-button2 {
+  z-index: 100;
+  background-color: $primary-button;
+  border-radius: 22px;
+  width: 209px;
+  height: 44px;
+  margin-bottom: 19px;
+  margin-top: 60px;
+  margin-left: 21px;
+  width: 90%;
+  cursor: url(https://cdn.custom-cursor.com/db/8927/32/minimal-pink-ice-cream-pointer.png), pointer;
+  @include transition(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: $primary-button-hov;
+  }
+  @media screen and (min-width: 768px) {
+    width: 35vw;
+  }
+}
+.button-text {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 21px;
+  color: $crimson-text;
+}
+.button__svg {
+  width: 6.03px;
+  height: 8px;
+  margin-left: 12.08px;
+}
+.menu {
+  display: block;
+  align-items: center;
+  justify-content: space-between;
+}
+.menu-container.is-open {
+  transform: translateX(0);
+}
+.menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(225, 121, 146);
+  z-index: 999;
+  transform: translateX(100%);
+
+  @include transition(transform, 500ms);
+
+  @media screen and (min-width: 768px) {
+    width: 40vw;
+    transform: translateX(350%);
+    left: 60%;
+  }
+  @media screen and (min-width: 1280px) {
+    display: none;
+  }
+}
+.menu__close-icon {
+  position: absolute;
+  left: 208px;
+}
+.mobile-menu__link {
+  font-family: 'DM Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 18px;
+  color: $primary-button;
+  margin-top: 0;
+  @include transition(color);
+  &:hover,
+  &:focus {
+    color: $crimson-text;
+  }
+}
+
+.mobile-menu__item {
+  border: 1px solid #e18298;
+  padding: 12px 21px;
+}
+.mobile-menu {
+  width: 100vw;
+  height: 100vh;
+  @media screen and (min-width: 768px) {
+    width: 40vw;
+  }
+}
